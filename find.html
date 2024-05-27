@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitta oss</title>
+    <link rel="stylesheet" href="./find.css">
+    <meta name="description" content="Hitta Five Fans Hotel på kartan">
+</head>
+<body>
+    <div class="mobile-nav">
+        <button class="nav-button" id="toggleButton"><img src="./imgs/menuIcon.webp"></button>
+    </div>¨
+    <div class="mobile-nav-container" id="mobile-nav-container">
+        <a href="/">Välkommen</a>
+        <a href="/find.html">Hitta</a>
+        <a href="/book.html">Boka</a>
+        <a href="/contact.html">Kontakt</a>
+    </div>
+    <div class="row-1">
+        <div class="hotel-bg-container">
+            <h1>Five Fans Hotel</h1>
+        </div>
+    </div>
+    <div class="row-2">
+        <div class="welcome-container">
+            <div style="width: 100%; height: 100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Lilla%20storgatan%207c+(Lilla%20storgatan%207c)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
+        </div>
+        <div class="navbar-container">
+            <a href="/">Välkommen</a>
+            <a href="/find.html">Hitta</a>
+            <a href="/book.html">Boka</a>
+            <a href="/contact.html">Kontakt</a>
+        </div>
+    </div>
+    <div class="row-3">
+        <div class="footer-container">
+            <h1>Lilla stor gatan 7C</h1>
+        </div>
+    </div>
+    <script>
+        let navbarState = 'closed';
+
+        function openNavbar() {
+            console.log("sdsd")
+            document.getElementById('mobile-nav-container').classList.add('open');
+            navbarState = 'open';
+        }
+
+        function closeNavbar() {
+            document.getElementById('mobile-nav-container').classList.remove('open');
+            navbarState = 'closed';
+        }
+
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            if (navbarState === 'closed') {
+                openNavbar();
+            } else {
+                closeNavbar();
+            }
+        });
+    </script>
+</body>
+</html>

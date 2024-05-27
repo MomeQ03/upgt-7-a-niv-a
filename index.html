@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Fans Hotel</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Welcome to Five Fans Hotel">
+</head>
+<body>
+    <div class="mobile-nav">
+        <button class="nav-button" id="toggleButton"><img src="./imgs/menuIcon.webp"></button>
+    </div>¨
+    <div class="mobile-nav-container" id="mobile-nav-container">
+        <a href="/">Välkommen</a>
+        <a href="/find.html">Hitta</a>
+        <a href="/book.html">Boka</a>
+        <a href="/contact.html">Kontakt</a>
+    </div>
+    <div class="row-1">
+        <div class="hotel-bg-container">
+            <h1>Five Fans Hotel</h1>
+        </div>
+    </div>
+    <div class="row-2">
+        <div class="welcome-container">
+            <h1>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also</h1>
+        </div>
+        <div class="navbar-container">
+            <a href="/">Välkommen</a>
+            <a href="/find.html">Hitta</a>
+            <a href="/book.html">Boka</a>
+            <a href="/contact.html">Kontakt</a>
+        </div>
+    </div>
+    <div class="row-3">
+        <div class="footer-container">
+            <h1>Lilla stor gatan 7C</h1>
+        </div>
+    </div>
+    <script>
+        let navbarState = 'closed';
+
+        function openNavbar() {
+            console.log("sdsd")
+            document.getElementById('mobile-nav-container').classList.add('open');
+            navbarState = 'open';
+        }
+
+        function closeNavbar() {
+            document.getElementById('mobile-nav-container').classList.remove('open');
+            navbarState = 'closed';
+        }
+
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            if (navbarState === 'closed') {
+                openNavbar();
+            } else {
+                closeNavbar();
+            }
+        });
+    </script>
+</body>
+</html>
